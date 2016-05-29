@@ -197,11 +197,13 @@ public class RCTCameraModule extends ReactContextBaseJavaModule implements Media
 
         int mediaRecorderHintOrientation = (90 + ((720 - RCTCamera.getInstance().getActualDeviceOrientation() * 90))) % 360;
 
-        // adjust for differences in how devices display front facing http://www.theverge.com/2015/11/9/9696774/google-nexus-5x-upside-down-camera
+        // adjust for differences in how devices display front facing
+        // http://www.theverge.com/2015/11/9/9696774/google-nexus-5x-upside-down-camera
         if (RCT_CAMERA_TYPE_FRONT == options.getInt("type")) {
-            if ((RCT_CAMERA_ORIENTATION_PORTRAIT == RCTCamera.getInstance().getOrientation()) && (RCTCamera.getInstance().getAdjustedDeviceOrientation() == 90)) {
+          if ((0 == RCTCamera.getInstance().getOrientation()) &&
+              (RCTCamera.getInstance().getAdjustedDeviceOrientation() == 90)) {
                 mediaRecorderHintOrientation += 180;
-            }
+          }
         }
         mMediaRecorder.setOrientationHint(mediaRecorderHintOrientation);
 
