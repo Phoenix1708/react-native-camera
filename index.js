@@ -4,6 +4,7 @@ import {
   DeviceEventEmitter,
   Platform,
   StyleSheet,
+  NativeModules,
   requireNativeComponent,
   View,
 } from 'react-native';
