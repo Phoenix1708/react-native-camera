@@ -46,9 +46,10 @@
   },
   "dependencies": {},
   "description": "A Camera component for React Native. Also reads barcodes.",
-  "devDependencies": {},
-  "gitHead": "a6785cfa46e9564f2552603fdc7f441a3c668729",
-  "homepage": "https://github.com/lwansbrough/react-native-camera#readme",
+  "author": "Lochlan Wansbrough <lochie@live.com> (http://lwansbrough.com)",
+  "nativePackage": true,
+  "license": "MIT",
+  "homepage": "https://github.com/lwansbrough/react-native-camera",
   "keywords": [
     "barcode",
     "camera",
